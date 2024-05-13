@@ -1,2 +1,7 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "bootstrap/scss/bootstrap";
+@import "utility.scss";
+
+ul, li {
+	list-style: none;
+}
