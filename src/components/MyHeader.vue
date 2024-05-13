@@ -10,7 +10,8 @@
                     {
                         title: "About",
                         routeName: "about",
-                    },{
+                    },
+                    {
                         title: "Contacts",
                         routeName: "contacts",
                     },
