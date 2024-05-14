@@ -84,19 +84,19 @@
 					<div class="col-6">
 						<div class="row">
 							<div class="col-6 mb-4">
-								<input type="text" name="" id="" placeholder="Your Name" />
+								<input type="text" placeholder="Your Name" />
 							</div>
 							<div class="col-6 mb-4">
-								<input type="text" name="" id="" placeholder="Your e-mail"/>
+								<input type="text" placeholder="Your e-mail"/>
 							</div>
 							<div class="col-6 mb-4">
-								<input type="text" name="" id="" placeholder="Mobile number"/>
+								<input type="text" placeholder="Mobile number"/>
 							</div>
 							<div class="col-6 mb-4">
-								<input type="text" name="" id="" placeholder="Your Pincode"/>
+								<input type="text" placeholder="Your Pincode"/>
 							</div>
 							<div class="col-12 mb-4">
-								<textarea name="" id="" rows="10" placeholder="Enter Your Message"></textarea>
+								<textarea rows="10" placeholder="Enter Your Message"></textarea>
 							</div>
 							<div class="col-12">
 								<Button :text="'SUBMIT NOW'" />
