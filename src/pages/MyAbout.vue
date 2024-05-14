@@ -55,11 +55,9 @@ import CardListMember from '../components/CardListMember.vue';
         <h2 class="text-center">high quality section</h2>
     </div>
 
-    <div class="d-flex row px-5 text-center mb-5 mt-5">
-        <h5 class="mt-4">THE PERICUROS</h5>
-        <h2 class="mb-5">MEET THE TEAM</h2>
-        <cardListMember />
-    </div>
+    <section class="my-6 container text-center">
+		<CardListMember />
+	</section>
        
     <div class="MySectionIcon">
         <h2 class="text-center">icon section</h2>
