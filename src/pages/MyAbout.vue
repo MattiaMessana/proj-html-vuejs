@@ -27,8 +27,14 @@ import CardListMember from '../components/CardListMember.vue';
 					type: "Music Video",
 				},
 			],
+            widgets: ["01", "02", "03", "04"],
             };
         },
+        methods: {
+		getPathImg(fileName) {
+			return new URL(`../assets/img/${fileName}.png`, import.meta.url).href;
+		},
+	},
     }
 </script>
 
@@ -51,17 +57,36 @@ import CardListMember from '../components/CardListMember.vue';
         <BestHitsCard class="col-4" v-for="card in bestHits" :card="card" />
     </div>
 
-    <div class="MySection">
-        <h2 class="text-center">high quality section</h2>
+    
+    <div class="MySection d-flex">
+        <div class="container"></div>
+        <div class="container p-4">
+            <span>ABOUT US</span>
+            <h3 class="my-3">HIGH QUALITY CINEMATIC</h3>
+            <p>
+                Orci varius penatibus et magnis dis parturient In the montes, nascetur ridiculus mus. Nulla
+                A nisi ut mi efficitur hendrerit. nunc urna. quisque a partr hendrerit purus erat, nec dapibus
+                sem sed. phasellus sed eli molestie, porttitor ligula of the egestas, mattis augue. quisque et
+                rhoncus justo. suspendisse luctus pharetra eleme tcondimentum.
+            </p>
+            <button class="btn btn-light rounded-0 px-4">READ MORE</button>
+        </div>
+        
     </div>
 
     <section class="my-6 container text-center">
 		<CardListMember />
 	</section>
        
-    <div class="MySectionIcon">
-        <h2 class="text-center">icon section</h2>
-    </div>
+        <section class="widget-container py-7">
+			<div class="container">
+				<div class="row">
+					<div v-for="widget in widgets" class="col-3 d-flex justify-content-center">
+						<img class="w-75" :src="getPathImg(widget)" alt="" />
+					</div>
+				</div>
+			</div>
+        </section>
        
 </template>
 
@@ -93,14 +118,12 @@ import CardListMember from '../components/CardListMember.vue';
     }
 }
     .MySection {
-        // debug
-        height: 200px;
-        background-color: lightcoral;
+        color: white;
+        background-color: black;
     }
-    .MySectionIcon {
-        // debug
-        height: 200px;
-        background-color: lightgreen;
+    
+    .widget-container {
+	    background-color: black;
     }
 
 
