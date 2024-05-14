@@ -1,6 +1,6 @@
 <template>
 	<div class="card text-center border border-0">
-		<p>{{ card.image }}</p>
+        <img :src="card.image" class="card-img-top" alt="">
 		<div class="card-body">
 			<h5 class="card-title">{{ card.title }}</h5>
 			<p class="card-subtitle text-body-secondary">{{ card.type }}</p>

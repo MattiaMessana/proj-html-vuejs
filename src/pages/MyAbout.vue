@@ -1,6 +1,6 @@
 <script>
 import BestHitsCard from '../components/BestHitsCard.vue';
-import CardListMember from '../components/cardListMember.vue';
+import CardListMember from '../components/CardListMember.vue';
 
     export default {
         components: {
@@ -12,17 +12,17 @@ import CardListMember from '../components/cardListMember.vue';
                 
 			bestHits: [
 				{
-					image: "image",
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-01.jpg",
 					title: "Seventeenth Summer",
 					type: "Commercial, Music Video.",
 				},
 				{
-					image: "image",
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-02.jpg",
 					title: "A Message to Space",
 					type: "Short Film",
 				},
 				{
-					image: "image",
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-03.jpg",
 					title: "The most beautiful thing",
 					type: "Music Video",
 				},
