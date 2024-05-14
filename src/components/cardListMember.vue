@@ -19,7 +19,7 @@
                     {
                         image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Team-03.jpg",
                         name: "Gloria Riccasso",
-                        role: "Main Producer ",
+                        role: "Main Producer",
                     },
                     {
                         image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Team-04.jpg",

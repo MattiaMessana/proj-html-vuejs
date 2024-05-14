@@ -61,7 +61,10 @@ import CardListMember from '../components/CardListMember.vue';
         <cardListMember />
     </div>
        
-
+    <div class="MySectionIcon">
+        <h2 class="text-center">icon section</h2>
+    </div>
+       
 </template>
 
 <style scoped lang="scss">
@@ -96,5 +99,11 @@ import CardListMember from '../components/CardListMember.vue';
         height: 200px;
         background-color: lightcoral;
     }
+    .MySectionIcon {
+        // debug
+        height: 200px;
+        background-color: lightgreen;
+    }
+
 
 </style>

@@ -53,6 +53,13 @@ export default {
 
 <style scoped lang="scss">
     header {
+		position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	z-index: 9999;
+		background-color: white;
+		// debug
         height: 80px;
         img {
             width: 70px;
