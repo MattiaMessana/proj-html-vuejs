@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-	<header class="d-flex flex-row justify-content-around text-center align-items-center">
+	<header class="d-flex flex-row justify-content-around text-center align-items-center p-3">
         <div>
             <img :src="getImagePath(imgLogo)" :alt="logoTitle">
         </div>

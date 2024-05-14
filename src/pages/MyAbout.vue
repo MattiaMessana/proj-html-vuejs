@@ -1,12 +1,100 @@
 <script>
+import BestHitsCard from '../components/BestHitsCard.vue';
+import CardListMember from '../components/cardListMember.vue';
 
+    export default {
+        components: {
+            BestHitsCard,
+            CardListMember,
+        },
+        data() {
+            return {
+                
+			bestHits: [
+				{
+					image: "image",
+					title: "Seventeenth Summer",
+					type: "Commercial, Music Video.",
+				},
+				{
+					image: "image",
+					title: "A Message to Space",
+					type: "Short Film",
+				},
+				{
+					image: "image",
+					title: "The most beautiful thing",
+					type: "Music Video",
+				},
+			],
+            };
+        },
+    }
 </script>
 
 <template>
-    <h2> About</h2>
+
+    <div class="bg-image">
+        <div class="contacts">
+            <h2>ABOUT</h2>
+                <div class="home-contacts">
+                    <router-link class="home" :to="{ name: 'home' }">Home</router-link>
+                    <span> / About</span>
+                </div>
+        </div>
+    </div>
+
+       
+    <div class="cards row px-5 text-center mb-5 mt-3">
+        <h5 class="mt-4">YOUR WATCHLIST</h5>
+        <h2 class="mb-5">BEST HITS MOVIES</h2>
+        <BestHitsCard class="col-4" v-for="card in bestHits" :card="card" />
+    </div>
+
+    <div class="MySection">
+        <h2 class="text-center">high quality section</h2>
+    </div>
+
+    <div class="d-flex row px-5 text-center mb-5 mt-5">
+        <h5 class="mt-4">THE PERICUROS</h5>
+        <h2 class="mb-5">MEET THE TEAM</h2>
+        <cardListMember />
+    </div>
+       
+
 </template>
 
 <style scoped lang="scss">
+    .bg-image {
+    background-image: url(/src/assets/img/bredcum-img.jpg);
+    background-size: cover;
+    background-position: center;
 
-    
+    .contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
+
+        h2 {
+            color: white;
+            font-size: 3rem;
+        }
+
+        .home-contacts {
+            color: white;
+
+            .home {
+                color: white;
+            }
+        }
+    }
+}
+    .MySection {
+        // debug
+        height: 200px;
+        background-color: lightcoral;
+    }
+
 </style>

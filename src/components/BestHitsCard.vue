@@ -1,8 +1,10 @@
 <template>
-	<div>
+	<div class="card text-center border border-0">
 		<p>{{ card.image }}</p>
-		<h5>{{ card.title }}</h5>
-		<p>{{ card.type }}</p>
+		<div class="card-body">
+			<h5 class="card-title">{{ card.title }}</h5>
+			<p class="card-subtitle text-body-secondary">{{ card.type }}</p>
+		</div>
 	</div>
 </template>
 
