@@ -72,8 +72,36 @@
 			<div class="container my-6">
 				<div class="row">
 					<div class="col-6">
-						<p class="text-cta">COLLABORATE</p>
+						<p class="heading-class">COLLABORATE</p>
 						<h3 class="title-cta">WANT TO WORK WITH US? LEAVE US A MESSAGE!</h3>
+						<p class="text-muted text-justified">
+							Duis sit amet congue ipsum. Nulla maximus My venenatis posuere.To The Mauris ut tempus
+							Suspendisse porta tincidunt lectus non of me pellentesque. At A Sed blandit at diam sit
+							amet Orci varius natoque penatibus et dis dis to parturient montes, My Car nascetur
+							ridiculus Sed feugiat lacus in erat egestas, quis eleifend lacus imperdiet.
+						</p>
+					</div>
+					<div class="col-6">
+						<div class="row">
+							<div class="col-6 mb-4">
+								<input type="text" name="" id="" placeholder="Your Name" />
+							</div>
+							<div class="col-6 mb-4">
+								<input type="text" name="" id="" placeholder="Your e-mail"/>
+							</div>
+							<div class="col-6 mb-4">
+								<input type="text" name="" id="" placeholder="Mobile number"/>
+							</div>
+							<div class="col-6 mb-4">
+								<input type="text" name="" id="" placeholder="Your Pincode"/>
+							</div>
+							<div class="col-12 mb-4">
+								<textarea name="" id="" rows="10" placeholder="Enter Your Message"></textarea>
+							</div>
+							<div class="col-12">
+								<Button :text="'SUBMIT NOW'" />
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -87,6 +115,9 @@ import BestHitsCard from "../components/BestHitsCard.vue";
 import CounterNumberCard from "../components/CounterNumberCard.vue";
 import LatestNewsCard from "../components/LatestNewsCard.vue";
 import CardListMember from "../components/CardListMember.vue";
+import Button from "../components/Button.vue";
+
+
 
 export default {
 	components: {
@@ -95,6 +126,7 @@ export default {
 		CounterNumberCard,
 		LatestNewsCard,
 		CardListMember,
+		Button,
 	},
 	data() {
 		return {
@@ -234,6 +266,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "../style/variables" as *;
+
 .jumbotron {
 	height: calc(100vh - 80px);
 	background-color: lightcoral;
@@ -259,13 +293,27 @@ export default {
 .widget-container {
 	background-color: rgba($color: #000000, $alpha: 0.8);
 }
-.text-cta {
-	font-weight: bold;
-	font-size: small;
-}
-.title-cta {
-	font-size: 40px;
-	line-height: 50px;
-	font-weight: bold;
+.cta {
+	input,
+	textarea {
+		width: 100%;
+		background-color: $lightgray;
+		border: 0;
+		padding: 0.54em 1.3em;
+
+		&:focus {
+			outline: 0;
+			box-shadow: 0px 5px 15px -7px rgba(0, 0, 0, 0.1);
+		}
+	}
+	.text-cta {
+		font-weight: bold;
+		font-size: small;
+	}
+	.title-cta {
+		font-size: 40px;
+		line-height: 50px;
+		font-weight: bold;
+	}
 }
 </style>
