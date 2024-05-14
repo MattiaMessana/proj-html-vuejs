@@ -58,7 +58,7 @@ import CardListMember from '../components/CardListMember.vue';
     </div>
 
     
-    <div class="MySection d-flex">
+    <div class="MySection d-flex align-items-center">
         <div class="container"></div>
         <div class="container p-4">
             <span>ABOUT US</span>
@@ -120,6 +120,8 @@ import CardListMember from '../components/CardListMember.vue';
     .MySection {
         color: white;
         background-color: black;
+        // debug
+        min-height: 500px;
     }
     
     .widget-container {
