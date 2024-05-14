@@ -86,7 +86,7 @@ import WhatWeDoCard from "../components/WhatWeDoCard.vue";
 import BestHitsCard from "../components/BestHitsCard.vue";
 import CounterNumberCard from "../components/CounterNumberCard.vue";
 import LatestNewsCard from "../components/LatestNewsCard.vue";
-import CardListMember from "../components/cardListMember.vue";
+import CardListMember from "../components/CardListMember.vue";
 
 export default {
 	components: {
