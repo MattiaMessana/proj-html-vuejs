@@ -2,6 +2,7 @@
 import AboutSection from '../components/AboutSection.vue';
 import BestHitsCard from '../components/BestHitsCard.vue';
 import CardListMember from '../components/CardListMember.vue';
+import HeroSection from '../components/HeroSection.vue';
 import WidgetsSection from '../components/WidgetsSection.vue';
 
 
@@ -11,6 +12,7 @@ import WidgetsSection from '../components/WidgetsSection.vue';
             CardListMember,
             AboutSection,
             WidgetsSection,
+            HeroSection,
             
         },
         data() {
@@ -41,17 +43,9 @@ import WidgetsSection from '../components/WidgetsSection.vue';
 <template>
 
     <!-- hero -->
-
-        <div class="bg-image">
-            <div class="contacts">
-                <h2>ABOUT</h2>
-                <div class="home-contacts">
-                    <router-link class="home" :to="{ name: 'home' }">Home</router-link>
-                    <span> / About</span>
-                </div>
-            </div>
-        </div>
-
+    
+    <HeroSection :pages="{ title:'ABOUT', span:'About'}"  />
+        
     <!-- /hero -->
 
     
