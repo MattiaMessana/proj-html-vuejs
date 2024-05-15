@@ -18,7 +18,7 @@
 
 <style lang="scss" scoped>
 .zoom {
-  padding: 10px;
+  padding: 15px;
   transition: transform .2s; /* Animation */
 }
 .zoom:hover {
