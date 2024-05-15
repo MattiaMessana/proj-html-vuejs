@@ -3,7 +3,7 @@ export default {
 	data() {
 		return {
             logoTitle: "Cinematico-logo",
-            imgLogo: "otherLogo.jpg",
+            imgLogo: "logo.svg",
 			menu: [
 				{
 					title: "Home",
@@ -30,12 +30,14 @@ export default {
 </script>
 
 <template>
-	<header class="d-flex flex-row justify-content-around text-center align-items-center p-3">
+	<header class="d-flex flex-row justify-content-between  p-3">
+		
         <div>
-            <img :src="getImagePath(imgLogo)" :alt="logoTitle">
+            <img :src="getImagePath(imgLogo)" :alt="logoTitle" class="align-self-center">
         </div>
+
 		<ul class="d-flex">
-			<li v-for="item in menu" class="mx-2">
+			<li v-for="item in menu" class="mx-2 align-self-center">
 				<router-link :to="{ name: item.routeName }" class="nav-link">
 					{{ item.title }}
 				</router-link>
@@ -59,10 +61,9 @@ export default {
     	width: 100%;
     	z-index: 9999;
 		background-color: white;
-		// debug
-        height: 80px;
+		
         img {
-            width: 70px;
+            width: 150px;
         }
     }
 </style>
