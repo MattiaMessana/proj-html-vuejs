@@ -53,10 +53,10 @@ export default {
 	}
 }
 .zoom {
-  padding: 5px;
-  transition: transform .2s; /* Animation */
+	width: 100%;
+	transition: transform 0.5s; /* Animation */
 }
 .zoom:hover {
-  transform: scale(1.1);
+	transform: scale(1.05);
 }
 </style>
