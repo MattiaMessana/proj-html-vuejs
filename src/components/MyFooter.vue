@@ -73,7 +73,7 @@ export default {
 </script>
 
 <template>
-    <div class="d-flex gap-5 text-white container-footer">
+    <div class="d-flex justify-content-between text-white container-footer">
         <div v-for="item in info">
             <h6 class="mb-4">{{ item.title }}</h6>
             <div class="d-flex align-items-start gap-3">
