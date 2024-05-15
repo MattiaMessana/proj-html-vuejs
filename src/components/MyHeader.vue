@@ -49,8 +49,10 @@ export default {
         <div>
             <ul class="d-flex">
                 <li class="mx-2 zoom"><i class="fa-brands fa-facebook-f"></i></li>
+                <li class="mx-2 zoom"><i class="fa-brands fa-square-x-twitter"></i></li>
                 <li class="mx-2 zoom"><i class="fa-brands fa-youtube"></i></li>
                 <li class="mx-2 zoom"><i class="fa-brands fa-instagram"></i></li>
+				
             </ul>
         </div>
 	</header>
