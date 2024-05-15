@@ -1,10 +1,10 @@
 <template>
 	<div>
-		<div class="mb-3">
-			<img :src="getPathImg()" alt="" class="zoom" />
+		<div class="mb-3 my-translate">
+			<img :src="getPathImg()" alt="" />
 		</div>
 		<h5 class="mb-2">{{ card.title }}</h5>
-		<p class="text-muted ">{{ card.description }}</p>
+		<p class="text-muted">{{ card.description }}</p>
 	</div>
 </template>
 
@@ -32,11 +32,11 @@ h5 {
 	line-height: 1.4;
 	letter-spacing: 0.6px;
 }
-.zoom {
-  padding: 5px;
-  transition: transform .2s; /* Animation */
-}
-.zoom:hover {
-  transform: scale(1.3);
+.my-translate {
+	transition: all 0.5s; /* Animation */
+
+	&:hover {
+		transform: translateY(-12px);
+	}
 }
 </style>
