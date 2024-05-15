@@ -1,5 +1,10 @@
 <script>
+import HeroSection from '../components/HeroSection.vue';
+
 export default {
+    components: {
+        HeroSection,
+    },
     data() {
         return {
             contactUs: [
@@ -45,15 +50,7 @@ export default {
 
 <template>
     <!-- hero -->
-    <div class="bg-image">
-        <div class="contacts">
-            <h2>CONTACTS</h2>
-            <div class="home-contacts">
-                <router-link class="home" :to="{ name: 'home' }">Home</router-link>
-                <span> / Contacts</span>
-            </div>
-        </div>
-    </div>
+    <HeroSection :pages="{ title: 'CONTACTS', span: 'Contacts' }" />
 
     <!-- google maps -->
     <div class="container-maps">
