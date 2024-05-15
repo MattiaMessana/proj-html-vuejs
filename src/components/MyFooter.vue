@@ -1,5 +1,33 @@
 <script>
+import { ref } from 'vue';
 export default {
+    setup() {
+        const email = ref('');
+        const errorMessage = ref('');
+        const successMessage = ref('');
+
+        const validateEmail = (email) => {
+            const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return valid.test(email);
+        };
+
+        const subscribe = () => {
+            if (!validateEmail(email.value)) {
+                errorMessage.value = 'Please enter a valid email address.';
+                successMessage.value = '';
+            } else {
+                errorMessage.value = '';
+                successMessage.value = 'Thank You, Your Sign-Up Request Was Successful! Please Check Your Email Inbox To Confirm.';
+            }
+        };
+
+        return {
+            email,
+            errorMessage,
+            successMessage,
+            subscribe
+        };
+    },
     data() {
         return {
             info: [
@@ -110,12 +138,20 @@ export default {
             </li>
         </ul>
 
-        <ul>
-            <h6 class="mb-4">NEWSLETTER</h6>
-            <li class="lh-base" v-for="item in newsletter">
-                {{ item.row }}
-            </li>
-        </ul>
+        <div class="d-flex flex-column">
+            <ul>
+                <h6 class="mb-4">NEWSLETTER</h6>
+                <li class="lh-base" v-for="item in newsletter">
+                    {{ item.row }}
+                </li>
+                <div class="d-flex flex-column gap-3 mt-3 max-width">
+                    <input v-model="email" class="p-2 bg-dark border-0" type="text" placeholder="Enter Your Email">
+                    <button @click="subscribe" class="p-2 border-0">SUBSCRIBE</button>
+                    <p v-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
+                    <p v-if="successMessage">{{ successMessage }}</p>
+                </div>
+            </ul>
+        </div>
     </div>
 
 </template>
@@ -127,6 +163,14 @@ export default {
 
     img {
         width: 15px;
+    }
+
+    input[type="text"] {
+        color: white;
+    }
+
+    .max-width {
+        max-width: min-content;
     }
 }
 </style>
