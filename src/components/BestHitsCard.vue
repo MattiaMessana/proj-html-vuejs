@@ -1,27 +1,31 @@
 <template>
 	<div class="card text-center border border-0">
-        <img :src="card.image" class="card-img-top zoom" alt="">
-		<div class="card-body">
-			<h5 class="card-title">{{ card.title }}</h5>
-			<p class="card-subtitle text-body-secondary">{{ card.type }}</p>
+		<div class="overflow-hidden d-flex justify-content-center align-items-center">
+			<img :src="card.image" class="zoom" alt="" />
 		</div>
+		<h5 class="card-title my-3">{{ card.title }}</h5>
+		<p class="card-subtitle text-body-secondary mb-3">{{ card.type }}</p>
 	</div>
 </template>
 
 <script>
-	export default {
-		props: {
-			card: Object
-		}
-	}
+export default {
+	props: {
+		card: Object,
+	},
+};
 </script>
 
 <style lang="scss" scoped>
+.card-title {
+	font-weight: bold;
+	font-size: medium;
+}
 .zoom {
-  padding: 15px;
-  transition: transform .2s; /* Animation */
+	width: 100%;
+	transition: transform 0.5s; /* Animation */
 }
 .zoom:hover {
-  transform: scale(1.1);
+	transform: scale(1.05);
 }
 </style>

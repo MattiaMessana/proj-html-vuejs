@@ -19,10 +19,10 @@
 			</div>
 		</section>
 		<AboutSection />
-		<section class="my-6">
+		<section class="my-6 best-hits">
 			<div class="container text-center">
-				<h6>YOUR WATCHLIST</h6>
-				<h1>BEST HITS MOVIES</h1>
+				<p class="fw-bold fs-7">YOUR WATCHLIST</p>
+				<h2 class="fw-bold mb-4">BEST HITS MOVIES</h2>
 				<div class="cards row">
 					<BestHitsCard class="col-4" v-for="card in bestHits" :card="card" />
 				</div>
@@ -51,8 +51,8 @@
 		<section class="latest-news">
 			<div class="container my-6 text-center">
 				<div class="row">
-					<h6>LATEST NEWS</h6>
-					<h1>ARTICLES UPDATED DAILY</h1>
+					<p class="fw-bold fs-7">LATEST NEWS</p>
+					<h2 class="fw-bold mb-4">ARTICLES UPDATED DAILY</h2>
 					<LatestNewsCard class="col-4" v-for="card in latestNews" :card="card" />
 				</div>
 			</div>
@@ -187,17 +187,17 @@ export default {
 			bestHits: [
 				{
 					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-01.jpg",
-					title: "Seventeenth Summer",
+					title: "SEVENTEENTH SUMMER",
 					type: "Commercial, Music Video.",
 				},
 				{
 					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-02.jpg",
-					title: "A Message to Space",
+					title: "A MESSAGE TO SPACE",
 					type: "Short Film",
 				},
 				{
 					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-03.jpg",
-					title: "The most beautiful thing",
+					title: "THE MOST BEAUTIFUL THING",
 					type: "Music Video",
 				},
 				{
@@ -216,45 +216,23 @@ export default {
 					type: "Blaxploitation",
 				},
 			],
-			Team: [
-				{
-					image: "image",
-					name: "name",
-					work: "work",
-				},
-				{
-					image: "image",
-					name: "name",
-					work: "work",
-				},
-				{
-					image: "image",
-					name: "name",
-					work: "work",
-				},
-				{
-					image: "image",
-					name: "name",
-					work: "work",
-				},
-			],
 			latestNews: [
 				{
-					image: "image",
-					data: "data",
-					title: "title",
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/blog07.jpg",
+					data: "November 06 , 2021 By Admin",
+					title: "Recap your latest company event",
+					text: "Suspendisse dictum dictum tempor. Ut non faucibus arcu, id elementum est. Suspendisse sed",
+				},
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/blog01.jpg",
+					data: "May 27 , 2022 By Admin",
+					title: "How To Edit A Film Score To Serve ",
 					text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis est optio repellendus hic nisi. Quae.",
 				},
 				{
-					image: "image",
-					data: "data",
-					title: "title",
-					text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis est optio repellendus hic nisi. Quae.",
-				},
-				{
-					image: "image",
-					data: "data",
-					title: "title",
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/blog02.jpg",
+					data: "May 07 , 2022 By Admin",
+					title: "Are You Ready To Make It Awesome",
 					text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis est optio repellendus hic nisi. Quae.",
 				},
 			],
@@ -279,6 +257,15 @@ export default {
 .counter-number {
 	background-color: #000;
 	color: white;
+}
+.best-hits {
+	h6 {
+		font-weight: bold;
+		font-size: small;
+	}
+	h2 {
+		font-weight: bold;
+	}
 }
 .presentation {
 	min-height: 604px;
