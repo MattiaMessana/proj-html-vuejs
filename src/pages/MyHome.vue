@@ -11,16 +11,14 @@
 		</section>
 		<section class="my-6">
 			<div class="container text-center">
-				<h6>PELICULA STUDIO</h6>
-				<h1>THIS IS WHAT WE DO</h1>
+				<p class="fw-bold fs-7">PELICULA STUDIO</p>
+				<h2 class="fw-bold">THIS IS WHAT WE DO</h2>
 				<div class="cards row">
-					<WhatWeDoCard class="col-4" v-for="card in whatWeDoCards" :card="card" />
+					<WhatWeDoCard class="col-4 mt-4" v-for="card in whatWeDoCards" :card="card" />
 				</div>
 			</div>
 		</section>
-		<section class="about-us">
-			<div class="container"></div>
-		</section>
+		<AboutSection />
 		<section class="my-6">
 			<div class="container text-center">
 				<h6>YOUR WATCHLIST</h6>
@@ -87,13 +85,13 @@
 								<input type="text" placeholder="Your Name" />
 							</div>
 							<div class="col-6 mb-4">
-								<input type="text" placeholder="Your e-mail"/>
+								<input type="text" placeholder="Your e-mail" />
 							</div>
 							<div class="col-6 mb-4">
-								<input type="text" placeholder="Mobile number"/>
+								<input type="text" placeholder="Mobile number" />
 							</div>
 							<div class="col-6 mb-4">
-								<input type="text" placeholder="Your Pincode"/>
+								<input type="text" placeholder="Your Pincode" />
 							</div>
 							<div class="col-12 mb-4">
 								<textarea rows="10" placeholder="Enter Your Message"></textarea>
@@ -116,8 +114,7 @@ import CounterNumberCard from "../components/CounterNumberCard.vue";
 import LatestNewsCard from "../components/LatestNewsCard.vue";
 import CardListMember from "../components/CardListMember.vue";
 import Button from "../components/Button.vue";
-
-
+import AboutSection from "../components/AboutSection.vue";
 
 export default {
 	components: {
@@ -127,71 +124,46 @@ export default {
 		LatestNewsCard,
 		CardListMember,
 		Button,
+		AboutSection,
 	},
 	data() {
 		return {
 			whatWeDoCards: [
 				{
-					icon: "icon",
-					title: "title",
-					description: "description",
+					icon: "camera",
+					title: "ARRAY OF EQUIPMENT",
+					description:
+						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
 				},
 				{
-					icon: "icon",
-					title: "title",
-					description: "description",
+					icon: "chair",
+					title: "NEW TECHNOLOGIES",
+					description:
+						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
 				},
 				{
-					icon: "icon",
-					title: "title",
-					description: "description",
+					icon: "sunglass",
+					title: "VERSITILE ACTORS",
+					description:
+						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus",
 				},
 				{
-					icon: "icon",
-					title: "title",
-					description: "description",
+					icon: "video",
+					title: "TOP DIRECTORS",
+					description:
+						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus",
 				},
 				{
-					icon: "icon",
-					title: "title",
-					description: "description",
+					icon: "cabaret",
+					title: "MINUTE EDITING",
+					description:
+						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus",
 				},
 				{
-					icon: "icon",
-					title: "title",
-					description: "description",
-				},
-			],
-			bestHits: [
-				{
-					image: "image",
-					title: "title",
-					type: "type",
-				},
-				{
-					image: "image",
-					title: "title",
-					type: "type",
-				},
-				{
-					image: "image",
-					title: "title",
-					type: "type",
-				},
-				{
-					image: "image",
-					title: "title",
-					type: "type",
-				},
-				{
-					image: "image",
-					title: "title",
-					type: "type",
-				},
-				{
-					image: "image",
-					title: "title",
-					type: "type",
+					icon: "film",
+					title: "VERSITILE ACTORS",
+					description:
+						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus",
 				},
 			],
 			counterNumbers: [
@@ -210,6 +182,38 @@ export default {
 				{
 					number: "12",
 					title: "OUR AWARDS",
+				},
+			],
+			bestHits: [
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-01.jpg",
+					title: "Seventeenth Summer",
+					type: "Commercial, Music Video.",
+				},
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-02.jpg",
+					title: "A Message to Space",
+					type: "Short Film",
+				},
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-03.jpg",
+					title: "The most beautiful thing",
+					type: "Music Video",
+				},
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-04.jpg",
+					title: "PERMISSION TO SPEAK",
+					type: "Documentary",
+				},
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-05.jpg",
+					title: "EXPLORE OUR SPACE",
+					type: "Film noir",
+				},
+				{
+					image: "https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Gallery-06.jpg",
+					title: "FILM PRODUCTION",
+					type: "Blaxploitation",
 				},
 			],
 			Team: [
@@ -272,17 +276,13 @@ export default {
 	height: calc(100vh - 80px);
 	background-color: lightcoral;
 }
-.about-us {
-	min-height: 574px;
-	background-color: black;
-}
 .counter-number {
 	background-color: #000;
 	color: white;
 }
 .presentation {
 	min-height: 604px;
-	background-color: black;
+	background-image: url(../assets/img/bg-02.jpg);
 	color: white;
 
 	.quotation-marks {
