@@ -101,64 +101,71 @@ export default {
 </script>
 
 <template>
-    <div class="d-flex justify-content-between text-white container-footer">
-        <div v-for="item in info">
-            <h6 class="mb-4">{{ item.title }}</h6>
-            <div class="d-flex align-items-start gap-3">
-                <img decoding="async" class="wp-image-9059" :src="item.image" alt="">
-                <p>{{ item.row1 }} <br>
-                    {{ item.row2 }} <br>
-                    {{ item.row3 }}
-                </p>
+    <div class="d-flex justify-content-between flex-column text-white container-footer">
+        <div class="d-flex justify-content-between mb-5">
+            <div v-for="item in info">
+                <h6 class="mb-4">{{ item.title }}</h6>
+                <div class="d-flex align-items-start gap-3">
+                    <img decoding="async" class="wp-image-9059" :src="item.image" alt="">
+                    <p>{{ item.row1 }} <br>
+                        {{ item.row2 }} <br>
+                        {{ item.row3 }}
+                    </p>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                    <img decoding="async" class="wp-image-9060" :src="item.image2" alt="">
+                    <p>{{ item.row4 }} <br>
+                        {{ item.row5 }}
+                    </p>
+                </div>
+                <div class="d-flex align-items-start gap-3">
+                    <img decoding="async" class="wp-image-9060" :src="item.image3" alt="">
+                    <p>{{ item.row6 }}
+                    </p>
+                </div>
             </div>
-            <div class="d-flex align-items-start gap-3">
-                <img decoding="async" class="wp-image-9060" :src="item.image2" alt="">
-                <p>{{ item.row4 }} <br>
-                    {{ item.row5 }}
-                </p>
-            </div>
-            <div class="d-flex align-items-start gap-3">
-                <img decoding="async" class="wp-image-9060" :src="item.image3" alt="">
-                <p>{{ item.row6 }}
-                </p>
-            </div>
-        </div>
 
-        <ul>
-            <h6 class="mb-4">INFORMATION</h6>
-            <li class="lh-lg" v-for="item in information">
-                {{ item.row }}
-            </li>
-        </ul>
-
-        <ul>
-            <h6 class="mb-4">USEFUL LINKS</h6>
-            <li class="lh-lg" v-for="item in links">
-                {{ item.row }}
-            </li>
-        </ul>
-
-        <div class="d-flex flex-column">
             <ul>
-                <h6 class="mb-4">NEWSLETTER</h6>
-                <li class="lh-base" v-for="item in newsletter">
+                <h6 class="mb-4">INFORMATION</h6>
+                <li class="lh-lg" v-for="item in information">
                     {{ item.row }}
                 </li>
-                <div class="d-flex flex-column gap-3 mt-3 max-width">
-                    <input v-model="email" class="p-2 bg-dark border-0" type="text" placeholder="Enter Your Email">
-                    <button @click="subscribe" class="p-2 border-0">SUBSCRIBE</button>
-                    <p v-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
-                    <p v-if="successMessage">{{ successMessage }}</p>
-                </div>
             </ul>
-        </div>
-    </div>
 
+            <ul>
+                <h6 class="mb-4">USEFUL LINKS</h6>
+                <li class="lh-lg" v-for="item in links">
+                    {{ item.row }}
+                </li>
+            </ul>
+
+            <div class="d-flex flex-column">
+                <ul>
+                    <h6 class="mb-4">NEWSLETTER</h6>
+                    <li class="lh-base" v-for="item in newsletter">
+                        {{ item.row }}
+                    </li>
+                    <div class="d-flex flex-column gap-3 mt-3 max-width">
+                        <input v-model="email" class="p-2 bg-dark border-0" type="text" placeholder="Enter Your Email">
+                        <button @click="subscribe" class="p-2 border-0">SUBSCRIBE</button>
+                        <p v-if="errorMessage" class="text-danger">{{ errorMessage }}</p>
+                        <p v-if="successMessage">{{ successMessage }}</p>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <hr>
+            <span>© 2024 All Rights Reserved. Developed By TemplateMela</span>
+        </div>
+
+    </div>
 </template>
 
 <style scoped lang="scss">
 .container-footer {
-    padding: 50px;
+    padding: 50px 50px 15px;
     background-color: black;
 
     img {
@@ -172,5 +179,9 @@ export default {
     .max-width {
         max-width: min-content;
     }
+}
+
+.bg-black {
+    background-color: black;
 }
 </style>
