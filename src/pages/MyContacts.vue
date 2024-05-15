@@ -38,9 +38,7 @@ export default {
         };
     },
     methods: {
-        // getIconUrl(iconName) {
-        //     return new URL(`../assets/${iconName}`, import.meta.url).href;
-        // }
+
     },
 };
 </script>
@@ -62,7 +60,7 @@ export default {
         <div class="maps"></div>
     </div>
 
-    <div class="d-flex cont-valid-us">
+    <div class="d-flex cont-valid-us mb-5">
         <!-- validation -->
         <form class="row needs-validation container-validation" novalidate>
             <div class="">
