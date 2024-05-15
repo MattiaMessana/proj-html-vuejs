@@ -35,11 +35,6 @@ import WidgetsSection from '../components/WidgetsSection.vue';
 			],
             };
         },
-        methods: {
-		getPathImg(fileName) {
-			return new URL(`../assets/img/${fileName}.png`, import.meta.url).href;
-		},
-	},
     }
 </script>
 
@@ -56,7 +51,7 @@ import WidgetsSection from '../components/WidgetsSection.vue';
                 </div>
             </div>
         </div>
-        
+
     <!-- /hero -->
 
     
@@ -89,6 +84,7 @@ import WidgetsSection from '../components/WidgetsSection.vue';
         </section>
 
     <!-- /CardListMember -->
+
 
     <!-- WidgetsSection -->
 
