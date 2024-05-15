@@ -44,7 +44,7 @@ import WidgetsSection from '../components/WidgetsSection.vue';
 
     <!-- hero -->
 
-    <HeroSection :pages="{ title:'ABOUT', span:'About'}"  />
+        <HeroSection :pages="{ title:'ABOUT', span:'About'}"  />
         
     <!-- /hero -->
 
