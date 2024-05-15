@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="mb-3">
-			<img :src="getPathImg()" alt="" />
+			<img :src="getPathImg()" alt="" class="zoom" />
 		</div>
 		<h5 class="mb-2">{{ card.title }}</h5>
 		<p class="text-muted ">{{ card.description }}</p>
@@ -31,5 +31,12 @@ h5 {
 	font-size: 17px;
 	line-height: 1.4;
 	letter-spacing: 0.6px;
+}
+.zoom {
+  padding: 5px;
+  transition: transform .2s; /* Animation */
+}
+.zoom:hover {
+  transform: scale(1.3);
 }
 </style>

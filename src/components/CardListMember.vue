@@ -37,7 +37,7 @@ export default {
 		<p class="fw-bold fs-7">THE PERICUROS</p>
 		<h2 class="mb-5 fw-bold">MEET THE TEAM</h2>
 		<div class="card border-0 col-3" v-for="member in membersList">
-			<img :src="member.image" class="card-img-top rounded" alt="" />
+			<img :src="member.image" class="card-img-top rounded zoom" alt="" />
 			<div class="card-body">
 				<h5 class="card-title">{{ member.name }}</h5>
 				<p class="card-text">{{ member.role }}</p>
@@ -51,5 +51,12 @@ export default {
 	img {
 		max-width: 100%;
 	}
+}
+.zoom {
+  padding: 5px;
+  transition: transform .2s; /* Animation */
+}
+.zoom:hover {
+  transform: scale(1.1);
 }
 </style>
