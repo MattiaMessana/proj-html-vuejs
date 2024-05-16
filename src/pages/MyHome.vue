@@ -1,14 +1,6 @@
 <template>
 	<main>
-		<section class="jumbotron">
-			<div class="container h-100 d-flex align-items-center">
-				<div>
-					<p class="">CINEMA STUDIO</p>
-					<h1 class="">DANCING WITH OF THE STARS</h1>
-					<button>READ MORE</button>
-				</div>
-			</div>
-		</section>
+		<Jumbotron />
 		<section class="my-6">
 			<div class="container text-center">
 				<p class="fw-bold fs-7">PELICULA STUDIO</p>
@@ -57,15 +49,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="widget-container py-7">
-			<div class="container">
-				<div class="row">
-					<div v-for="widget in widgets" class="col-3 d-flex justify-content-center">
-						<img class="w-75" :src="getPathImg(widget)" alt="" />
-					</div>
-				</div>
-			</div>
-		</section>
+		<WidgetsSection />
 		<section class="cta">
 			<div class="container my-6">
 				<div class="row">
@@ -115,9 +99,12 @@ import LatestNewsCard from "../components/LatestNewsCard.vue";
 import CardListMember from "../components/CardListMember.vue";
 import Button from "../components/Button.vue";
 import AboutSection from "../components/AboutSection.vue";
+import Jumbotron from "../components/Jumbotron.vue";
+import WidgetsSection from "../components/WidgetsSection.vue";
 
 export default {
 	components: {
+		Jumbotron,
 		WhatWeDoCard,
 		BestHitsCard,
 		CounterNumberCard,
@@ -125,6 +112,7 @@ export default {
 		CardListMember,
 		Button,
 		AboutSection,
+		WidgetsSection,
 	},
 	data() {
 		return {
@@ -250,10 +238,7 @@ export default {
 <style lang="scss" scoped>
 @use "../style/variables" as *;
 
-.jumbotron {
-	height: calc(100vh - 80px);
-	background-color: lightcoral;
-}
+
 .counter-number {
 	background-color: #000;
 	color: white;
@@ -279,6 +264,7 @@ export default {
 }
 .widget-container {
 	background-color: rgba($color: #000000, $alpha: 0.8);
+	background-image: url(https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Parallax-03.jpg);
 }
 .cta {
 	input,

@@ -2,6 +2,8 @@
 @import "bootstrap/scss/bootstrap";
 @import "utility.scss";
 @import "_variables.scss";
+// Default theme
+@import '@splidejs/vue-splide/css';
 
 ul,
 li {
