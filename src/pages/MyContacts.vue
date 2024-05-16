@@ -1,9 +1,11 @@
 <script>
+import GoogleMaps from '../components/GoogleMaps.vue';
 import HeroSection from '../components/HeroSection.vue';
 
 export default {
     components: {
         HeroSection,
+        GoogleMaps,
     },
     data() {
         return {
@@ -53,9 +55,7 @@ export default {
     <HeroSection :pages="{ title: 'CONTACTS', span: 'Contacts' }" />
 
     <!-- google maps -->
-    <div class="container-maps">
-        <div class="maps"></div>
-    </div>
+    <GoogleMaps />
 
     <div class="d-flex cont-valid-us mb-5">
         <!-- validation -->
@@ -168,18 +168,6 @@ export default {
                 color: white;
             }
         }
-    }
-}
-
-.container-maps {
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-
-    .maps {
-        height: 300px;
-        width: 90%;
-        border: 1px solid black;
     }
 }
 
