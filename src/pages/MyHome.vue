@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="my-6 container text-center">
+		<section class="my-6 container text-center card-list-member">
 			<CardListMember />
 		</section>
 		<section class="presentation">
