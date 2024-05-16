@@ -30,16 +30,7 @@
 		<section class="my-6 container text-center card-list-member">
 			<CardListMember />
 		</section>
-		<section class="presentation">
-			<div class="container py-6 text-center w-50">
-				<i class="fa-solid fa-quote-left quotation-marks"></i>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore optio fugiat vitae, quisquam
-					itaque vel explicabo numquam! Laborum, illo! Rerum sint velit quo excepturi est perspiciatis a
-					ex eveniet voluptatibus?
-				</p>
-			</div>
-		</section>
+		<PresentationSection />
 		<section class="latest-news">
 			<div class="container my-6 text-center">
 				<div class="row">
@@ -101,6 +92,7 @@ import Button from "../components/Button.vue";
 import AboutSection from "../components/AboutSection.vue";
 import Jumbotron from "../components/Jumbotron.vue";
 import WidgetsSection from "../components/WidgetsSection.vue";
+import PresentationSection from "../components/PresentationSection.vue";
 
 export default {
 	components: {
@@ -113,6 +105,7 @@ export default {
 		Button,
 		AboutSection,
 		WidgetsSection,
+		PresentationSection,
 	},
 	data() {
 		return {
@@ -120,8 +113,7 @@ export default {
 				{
 					icon: "camera",
 					title: "ARRAY OF EQUIPMENT",
-					description:
-						"Lorem ipsum dolor amet, consectetur adipiscing. Pellentesque ultricies justo tellus.",
+					description: "Lorem ipsum dolor amet, consectetur ad",
 				},
 				{
 					icon: "chair",
@@ -238,10 +230,14 @@ export default {
 <style lang="scss" scoped>
 @use "../style/variables" as *;
 
-
 .counter-number {
-	background-color: #000;
+	background-image: url(https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Parallax-01.jpg);
 	color: white;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .best-hits {
 	h6 {
@@ -255,16 +251,20 @@ export default {
 .presentation {
 	min-height: 604px;
 	background-image: url(../assets/img/bg-02.jpg);
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: white;
-
-	.quotation-marks {
-		padding-top: 30px;
-		font-size: 70px;
-	}
 }
 .widget-container {
-	background-color: rgba($color: #000000, $alpha: 0.8);
 	background-image: url(https://wordpressthemes.live/WP02/WP031/wp-content/uploads/2022/08/Parallax-03.jpg);
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 .cta {
 	input,

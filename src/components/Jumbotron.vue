@@ -1,7 +1,7 @@
 <template>
 	<section class="jumbotron">
 		<Splide
-			data-splide='{"pagination": false}'
+			data-splide='{"pagination": false, "autoplay": true, "interval": 4000}'
 			class="h-100 position-relative"
 			:options="{ rewind: true }"
 			aria-label="My Favorite Images"
@@ -12,6 +12,10 @@
 			</SplideSlide>
 			<SplideSlide>
 				<img :src="getPathImg('07')" alt="Sample 2" />
+				<div class="my-overlay"></div>
+			</SplideSlide>
+			<SplideSlide>
+				<img :src="getPathImg('02')" alt="Sample 2" />
 				<div class="my-overlay"></div>
 			</SplideSlide>
 		</Splide>
